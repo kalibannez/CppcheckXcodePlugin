@@ -9,14 +9,14 @@
 #import "CppcheckXcodePlugin.h"
 #import <objc/runtime.h>
 
-static NSString * const IDEEditorDocumentWillSaveNotification = @"IDEEditorDocumentWillSaveNotification";
-static NSString * const PBXProjectDidOpenNotification = @"PBXProjectDidOpenNotification";
+static NSString* const IDEEditorDocumentWillSaveNotification = @"IDEEditorDocumentWillSaveNotification";
+static NSString* const PBXProjectDidOpenNotification = @"PBXProjectDidOpenNotification";
 
 @implementation CppcheckXcodePlugin
 
-static CppcheckXcodePlugin *instance = nil;
+static CppcheckXcodePlugin* instance = nil;
 
-+ (void)pluginDidLoad:(NSBundle *)plugin {
++ (void)pluginDidLoad:(NSBundle* )plugin {
 	static dispatch_once_t onceToken;	
 	dispatch_once(&onceToken, ^{
 		instance = [[self alloc] init];
@@ -60,7 +60,7 @@ static CppcheckXcodePlugin *instance = nil;
 	NSString* cmd = [NSString stringWithFormat:@"/usr/bin/xcodebuild -project %@ -showBuildSettings > %@",projectDirPath, xcodebuildOutputFile];
 	system([cmd UTF8String]);
 	
-	NSString *xcodeBuildOutput = [NSString stringWithContentsOfFile:xcodebuildOutputFile encoding:NSUTF8StringEncoding error:nil];
+	NSString* xcodeBuildOutput = [NSString stringWithContentsOfFile:xcodebuildOutputFile encoding:NSUTF8StringEncoding error:nil];
 	
 	NSRange tempDirRange = [xcodeBuildOutput rangeOfString:@"PROJECT_TEMP_ROOT = "];
 	if (tempDirRange.location == NSNotFound) {
