@@ -16,17 +16,18 @@ For example, if you want to run cppckeck with special options: just change comma
 ## Installation
 - Install Xcode plugin by building the project and restart Xcode
 - Copy IncrementalCppCheck.py script into your project root
-- In Xcode on Build Phases tab create new Run Script and enter following script:
-	```bash
-	SCRIPT_PATH="${SRCROOT}/IncrementalCppCheck.py"
-WORKING_DIR=$(eval echo -e `<${PROJECT_TEMP_ROOT}"/WorkingDirPath.txt"`)
-/usr/bin/python $SCRIPT_PATH $WORKING_DIR
-if [ $? -ne 0 ] ; then
-    exit 1
-fi
-```
+- In Xcode in Build Phases tab create new Run Script and enter following script:
+<code>
+SCRIPT_PATH="${SRCROOT}/IncrementalCppCheck.py"<br>
+&nbsp;&nbsp;WORKING_DIR=$(eval echo -e `<${PROJECT_TEMP_ROOT}"/WorkingDirPath.txt"`)<br>
+&nbsp;&nbsp;/usr/bin/python $SCRIPT_PATH $WORKING_DIR<br>
+&nbsp;&nbsp;if [ $? -ne 0 ] ; then<br>
+&nbsp;&nbsp;      exit 1<br>
+&nbsp;&nbsp;fi<br>
+</code>
 
 ## Uninstalling
 - Remove CppcheckXcodePlugin.xcplugin from ~/Library/Application Support/Developer/Shared/Xcode/Plug-ins folder
 - Remove created for plugin run script from Xcode
 - Remove IncrementalCppCheck.py script from your project folder
+
