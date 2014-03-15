@@ -47,7 +47,7 @@ def checkChangedFiles(changedFiles):
 			filesForCheck.add('-I'+changedFile[:changedFile.rfind('/')])
 
 	params = list()
-	params.append('/Applications/cppckeck/cppcheck')
+	params.append('cppcheck')
 
 	for fileForCheck in filesForCheck:
 		params.append(fileForCheck)
@@ -55,7 +55,6 @@ def checkChangedFiles(changedFiles):
 	params.append('-j '+str(multiprocessing.cpu_count()))
 	params.append('--enable=warning,performance,portability')
 	params.append('-q')
-	params.append('--include=/Users/kalibannez/Desktop/macros.h')
 	params.append('--template=gcc')
 	params.append('--platform=unix32')
 	child = sp.Popen(params, stdout=sp.PIPE, stderr=sp.PIPE)
