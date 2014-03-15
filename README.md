@@ -1,17 +1,16 @@
 CppcheckXcodePlugin
 ===================
 
-Plugin for Xcode that allows to make ccpcheck incremental static analysis
+Plugin for Xcode that automatically run cppcheck static analyzer for every changed file (for both .cpp and .h) at every build time
 
 ## Features
-- At every build time plugin automatically starts cppcheck analyzer for every changed file (for both .cpp and .h)
-- Easy to modify: logic of plugin separated for three parts:
-	- Xcode plugin, that hooks and dumps source file changes
-	- Xcode run script, that configure, run python script and interpret results
-	- Python IncrementalCppCheck.py script, that interpret results of plugin, process it, do checks, process results and send to Xcode
-For example, if you want to run cppckeck with special options: just change commant line arguments in IncrementalCppCheck.py
-- Easy to use: just setup it one time and it will be work every build
+- Easy to use: just setup it once and have static analyse at every build
 - Fast: cppcheck will be run only for changed files
+- Easy to modify: logic of plugin separated for three parts:
+	- Xcode plugin hooks and dumps source file changes
+	- Xcode run script configure, run python script and interpret it results
+	- Python IncrementalCppCheck.py script interpret results of plugin, process it, do checks, process results and send to Xcode<br>
+For example, if you want to run cppckeck with special options: just change commant line arguments in IncrementalCppCheck.py
 
 ## Installation
 - Install Xcode plugin by building the project and restart Xcode
@@ -26,8 +25,13 @@ SCRIPT_PATH="${SRCROOT}/IncrementalCppCheck.py"<br>
 &nbsp;&nbsp;fi<br>
 </code>
 
-## Uninstalling
+## Uninstallation
 - Remove CppcheckXcodePlugin.xcplugin from ~/Library/Application Support/Developer/Shared/Xcode/Plug-ins folder
 - Remove created for plugin run script from Xcode
 - Remove IncrementalCppCheck.py script from your project folder
 
+## License
+CppcheckXcodePlugin is released under the BSD LICENSE (see the LICENSE file)
+
+## Contact
+Any suggestions or improvements than welcome. Feel free to contact me at [kalibannez@gmail.com](mailto:kalibannez@gmail.com).
