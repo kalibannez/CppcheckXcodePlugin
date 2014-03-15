@@ -8,20 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		18FE09B61707639E00118FEB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18FE09B51707639E00118FEB /* Cocoa.framework */; };
-		18FE09C9170764E400118FEB /* SCXcodeMinimap.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FE09C8170764E400118FEB /* SCXcodeMinimap.m */; };
+		3E5F18B118D4C8C3007837BC /* CppcheckXcodePlugin-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E5F18AD18D4C8C3007837BC /* CppcheckXcodePlugin-Info.plist */; };
+		3E5F18B218D4C8C3007837BC /* SCXcodeMinimap.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F18B018D4C8C3007837BC /* SCXcodeMinimap.m */; };
 		8742532317307161001C947C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8742532217307161001C947C /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		18FE09B21707639E00118FEB /* SCXcodeMinimap.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SCXcodeMinimap.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		18FE09B21707639E00118FEB /* CppcheckXcodePlugin.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CppcheckXcodePlugin.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FE09B51707639E00118FEB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		18FE09B81707639E00118FEB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		18FE09B91707639E00118FEB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		18FE09BA1707639E00118FEB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		18FE09BD1707639E00118FEB /* SCXcodeMinimap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SCXcodeMinimap-Info.plist"; sourceTree = "<group>"; };
-		18FE09C11707639E00118FEB /* SCXcodeMinimap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SCXcodeMinimap-Prefix.pch"; sourceTree = "<group>"; };
-		18FE09C7170764E400118FEB /* SCXcodeMinimap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCXcodeMinimap.h; sourceTree = "<group>"; };
-		18FE09C8170764E400118FEB /* SCXcodeMinimap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCXcodeMinimap.m; sourceTree = "<group>"; };
+		3E5F18AD18D4C8C3007837BC /* CppcheckXcodePlugin-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CppcheckXcodePlugin-Info.plist"; sourceTree = "<group>"; };
+		3E5F18AE18D4C8C3007837BC /* CppcheckXcodePlugin-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CppcheckXcodePlugin-Prefix.pch"; sourceTree = "<group>"; };
+		3E5F18AF18D4C8C3007837BC /* SCXcodeMinimap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCXcodeMinimap.h; sourceTree = "<group>"; };
+		3E5F18B018D4C8C3007837BC /* SCXcodeMinimap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCXcodeMinimap.m; sourceTree = "<group>"; };
 		8742532217307161001C947C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -41,7 +42,7 @@
 		18FE09A91707639E00118FEB = {
 			isa = PBXGroup;
 			children = (
-				18FE09BB1707639E00118FEB /* SCXcodeMinimap */,
+				3E5F18AC18D4C8C3007837BC /* Classes */,
 				18FE09B41707639E00118FEB /* Frameworks */,
 				18FE09B31707639E00118FEB /* Products */,
 			);
@@ -50,7 +51,7 @@
 		18FE09B31707639E00118FEB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				18FE09B21707639E00118FEB /* SCXcodeMinimap.xcplugin */,
+				18FE09B21707639E00118FEB /* CppcheckXcodePlugin.xcplugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,31 +76,23 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		18FE09BB1707639E00118FEB /* SCXcodeMinimap */ = {
+		3E5F18AC18D4C8C3007837BC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				18FE09C7170764E400118FEB /* SCXcodeMinimap.h */,
-				18FE09C8170764E400118FEB /* SCXcodeMinimap.m */,
-				18FE09BC1707639E00118FEB /* Supporting Files */,
+				3E5F18AD18D4C8C3007837BC /* CppcheckXcodePlugin-Info.plist */,
+				3E5F18AE18D4C8C3007837BC /* CppcheckXcodePlugin-Prefix.pch */,
+				3E5F18AF18D4C8C3007837BC /* SCXcodeMinimap.h */,
+				3E5F18B018D4C8C3007837BC /* SCXcodeMinimap.m */,
 			);
-			path = SCXcodeMinimap;
-			sourceTree = "<group>";
-		};
-		18FE09BC1707639E00118FEB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				18FE09BD1707639E00118FEB /* SCXcodeMinimap-Info.plist */,
-				18FE09C11707639E00118FEB /* SCXcodeMinimap-Prefix.pch */,
-			);
-			name = "Supporting Files";
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		18FE09B11707639E00118FEB /* SCXcodeMinimap */ = {
+		18FE09B11707639E00118FEB /* CppcheckXcodePlugin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 18FE09C41707639E00118FEB /* Build configuration list for PBXNativeTarget "SCXcodeMinimap" */;
+			buildConfigurationList = 18FE09C41707639E00118FEB /* Build configuration list for PBXNativeTarget "CppcheckXcodePlugin" */;
 			buildPhases = (
 				18FE09AE1707639E00118FEB /* Sources */,
 				18FE09AF1707639E00118FEB /* Frameworks */,
@@ -109,9 +102,9 @@
 			);
 			dependencies = (
 			);
-			name = SCXcodeMinimap;
+			name = CppcheckXcodePlugin;
 			productName = SCXcodeMinimap;
-			productReference = 18FE09B21707639E00118FEB /* SCXcodeMinimap.xcplugin */;
+			productReference = 18FE09B21707639E00118FEB /* CppcheckXcodePlugin.xcplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -123,7 +116,7 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Stefan Ceriu";
 			};
-			buildConfigurationList = 18FE09AD1707639E00118FEB /* Build configuration list for PBXProject "SCXcodeMinimap" */;
+			buildConfigurationList = 18FE09AD1707639E00118FEB /* Build configuration list for PBXProject "CppcheckXcodePlugin" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -135,7 +128,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				18FE09B11707639E00118FEB /* SCXcodeMinimap */,
+				18FE09B11707639E00118FEB /* CppcheckXcodePlugin */,
 			);
 		};
 /* End PBXProject section */
@@ -145,6 +138,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E5F18B118D4C8C3007837BC /* CppcheckXcodePlugin-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,7 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18FE09C9170764E400118FEB /* SCXcodeMinimap.m in Sources */,
+				3E5F18B218D4C8C3007837BC /* SCXcodeMinimap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,10 +220,10 @@
 				DSTROOT = "$(HOME)";
 				GCC_ENABLE_OBJC_GC = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SCXcodeMinimap/SCXcodeMinimap-Prefix.pch";
-				INFOPLIST_FILE = "SCXcodeMinimap/SCXcodeMinimap-Info.plist";
+				GCC_PREFIX_HEADER = "Classes/CppcheckXcodePlugin-Prefix.pch";
+				INFOPLIST_FILE = "Classes/CppcheckXcodePlugin-Info.plist";
 				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CppcheckXcodePlugin;
 				WRAPPER_EXTENSION = xcplugin;
 			};
 			name = Debug;
@@ -243,10 +237,10 @@
 				DSTROOT = "$(HOME)";
 				GCC_ENABLE_OBJC_GC = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SCXcodeMinimap/SCXcodeMinimap-Prefix.pch";
-				INFOPLIST_FILE = "SCXcodeMinimap/SCXcodeMinimap-Info.plist";
+				GCC_PREFIX_HEADER = "Classes/CppcheckXcodePlugin-Prefix.pch";
+				INFOPLIST_FILE = "Classes/CppcheckXcodePlugin-Info.plist";
 				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CppcheckXcodePlugin;
 				WRAPPER_EXTENSION = xcplugin;
 			};
 			name = Release;
@@ -254,7 +248,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		18FE09AD1707639E00118FEB /* Build configuration list for PBXProject "SCXcodeMinimap" */ = {
+		18FE09AD1707639E00118FEB /* Build configuration list for PBXProject "CppcheckXcodePlugin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18FE09C21707639E00118FEB /* Debug */,
@@ -263,7 +257,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		18FE09C41707639E00118FEB /* Build configuration list for PBXNativeTarget "SCXcodeMinimap" */ = {
+		18FE09C41707639E00118FEB /* Build configuration list for PBXNativeTarget "CppcheckXcodePlugin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18FE09C51707639E00118FEB /* Debug */,

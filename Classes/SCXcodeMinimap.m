@@ -2,11 +2,10 @@
 //  SCXcodeMinimap.m
 //  SCXcodeMinimap
 //
-//  Created by Stefan Ceriu on 3/30/13.
+//  Created by Alexander Perepelitsyn on 15/04/2014
 //  Copyright (c) 2013 Stefan Ceriu. All rights reserved
 //
 
-#import "SCMiniMapView.h"
 #import "SCXcodeMinimap.h"
 #import <objc/runtime.h>
 
