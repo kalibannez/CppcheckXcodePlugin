@@ -1,14 +1,15 @@
 //
-//  SCXcodeMinimap.h
-//  SCXcodeMinimap
+//  CppcheckXcodePlugin.h
+//  CppcheckXcodePlugin
 //
-//  Created by Stefan Ceriu on 3/30/13.
-//  Copyright (c) 2013 Stefan Ceriu. All rights reserved.
+//  Created by Alexander Perepelitsyn on 15.04.2014
+//  Copyright (c) 2014 Alexander Perepelitsyn. All rights reserved
 //
 
 #import <Cocoa/Cocoa.h>
 
-@interface SCXcodeMinimap : NSObject {
+@interface CppcheckXcodePlugin : NSObject {
 	NSString* workingDir;
 }
+
 @end

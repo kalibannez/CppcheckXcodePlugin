@@ -1,9 +1,9 @@
 //
-//  SCXcodeMinimap.m
-//  SCXcodeMinimap
+//  CppcheckXcodePlugin.m
+//  CppcheckXcodePlugin
 //
-//  Created by Alexander Perepelitsyn on 15/04/2014
-//  Copyright (c) 2013 Stefan Ceriu. All rights reserved
+//  Created by Alexander Perepelitsyn on 15.04.2014
+//  Copyright (c) 2014 Alexander Perepelitsyn. All rights reserved
 //
 
 #import "CppcheckXcodePlugin.h"
@@ -12,19 +12,20 @@
 static NSString * const IDEEditorDocumentWillSaveNotification = @"IDEEditorDocumentWillSaveNotification";
 static NSString * const PBXProjectDidOpenNotification = @"PBXProjectDidOpenNotification";
 
-@implementation SCXcodeMinimap
+@implementation CppcheckXcodePlugin
 
-static SCXcodeMinimap *sharedMinimap = nil;
+static CppcheckXcodePlugin *instance = nil;
+
 + (void)pluginDidLoad:(NSBundle *)plugin {
 	static dispatch_once_t onceToken;	
 	dispatch_once(&onceToken, ^{
-		sharedMinimap = [[self alloc] init];
+		instance = [[self alloc] init];
 	});
 }
 
 - (id)init {
 	if (self = [super init]) {
-		//[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(some:) name:nil object:nil];
+		//[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(catchAllXcodeNotifications:) name:nil object:nil];
 		
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openProject:) name:PBXProjectDidOpenNotification object:nil];
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saveDocument:) name:IDEEditorDocumentWillSaveNotification object:nil];
@@ -32,15 +33,14 @@ static SCXcodeMinimap *sharedMinimap = nil;
 	return self;
 }
 
--(void) some:(NSNotification*) sender {
-	//NSLog(@"  Notification: %@", [sender name]);
+-(void) catchAllXcodeNotifications:(NSNotification*) sender {
 	if ([[sender name] length] >= 2 && [[[sender name] substringWithRange:NSMakeRange(0, 2)] isEqualTo:@"NS"]) {
 		return;
 	} else {
-		NSLog(@"  Notification: %@", [sender name]);
+		NSLog(@"Xcode: %@", [sender name]);
 	}
 }
-id project = nil;
+
 -(void) openProject:(NSNotification*) sender {
 	if ([[NSApp mainMenu] itemWithTitle:@"View"] == nil) {
 		NSLog(@"Don't calculate derived data folder");
@@ -51,7 +51,7 @@ id project = nil;
 		NSLog(@"ERROR: sender not supported event");
 		return;
 	}
-	if (project == nil) project = [sender object];
+	
 	NSString* pbxprojDirPath = [[sender object] performSelector:@selector(projectFilePath)];
 	NSString* projectDirPath = [pbxprojDirPath substringToIndex:[pbxprojDirPath rangeOfString:@"/" options:NSBackwardsSearch].location];
 	
@@ -84,9 +84,6 @@ id project = nil;
 }
 
 - (void)saveDocument:(NSNotification*)sender {
-	
-	//NSLog(@"is open %@", [[project class] performSelector:@selector(projectFilePathWithPath:) withObject:@"/Users/kalibannez/Downloads/Browser/SCXcodeMiniMap-master/SCXcodeMinimap/SCMiniMapView.m"]);
-	
 	NSString* changedFileAbsoluteString = [[[sender object] fileURL] absoluteString];
 	NSString* changedFilePath = [changedFileAbsoluteString substringFromIndex:7];
 	
@@ -101,13 +98,6 @@ id project = nil;
 		[changedFiles addObject:changedFilePath];
 		[changedFiles writeToFile:changedFilesStoragePath atomically:YES];
 	}
-//	NSLog(@"arr %@", changedFiles);
-//	NSString* command = [NSString stringWithFormat:@"echo wedfgkbgjkdf > %@", changedFilesStoragePath];
-//	system([command UTF8String]);
-	
-//	NSAlert *alert = [[NSAlert alloc] init];
-//	[alert setMessageText:[NSString stringWithFormat:@"Saving %@", changedFilesStoragePath]];
-//	[alert runModal];
 }
 
 @end
