@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		18FE09B61707639E00118FEB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18FE09B51707639E00118FEB /* Cocoa.framework */; };
 		3E5F18B118D4C8C3007837BC /* CppcheckXcodePlugin-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E5F18AD18D4C8C3007837BC /* CppcheckXcodePlugin-Info.plist */; };
-		3E5F18B218D4C8C3007837BC /* SCXcodeMinimap.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F18B018D4C8C3007837BC /* SCXcodeMinimap.m */; };
+		3E5F18B218D4C8C3007837BC /* CppcheckXcodePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F18B018D4C8C3007837BC /* CppcheckXcodePlugin.m */; };
 		8742532317307161001C947C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8742532217307161001C947C /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,8 +21,8 @@
 		18FE09BA1707639E00118FEB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3E5F18AD18D4C8C3007837BC /* CppcheckXcodePlugin-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CppcheckXcodePlugin-Info.plist"; sourceTree = "<group>"; };
 		3E5F18AE18D4C8C3007837BC /* CppcheckXcodePlugin-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CppcheckXcodePlugin-Prefix.pch"; sourceTree = "<group>"; };
-		3E5F18AF18D4C8C3007837BC /* SCXcodeMinimap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCXcodeMinimap.h; sourceTree = "<group>"; };
-		3E5F18B018D4C8C3007837BC /* SCXcodeMinimap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCXcodeMinimap.m; sourceTree = "<group>"; };
+		3E5F18AF18D4C8C3007837BC /* CppcheckXcodePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CppcheckXcodePlugin.h; sourceTree = "<group>"; };
+		3E5F18B018D4C8C3007837BC /* CppcheckXcodePlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CppcheckXcodePlugin.m; sourceTree = "<group>"; };
 		8742532217307161001C947C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -81,8 +81,8 @@
 			children = (
 				3E5F18AD18D4C8C3007837BC /* CppcheckXcodePlugin-Info.plist */,
 				3E5F18AE18D4C8C3007837BC /* CppcheckXcodePlugin-Prefix.pch */,
-				3E5F18AF18D4C8C3007837BC /* SCXcodeMinimap.h */,
-				3E5F18B018D4C8C3007837BC /* SCXcodeMinimap.m */,
+				3E5F18AF18D4C8C3007837BC /* CppcheckXcodePlugin.h */,
+				3E5F18B018D4C8C3007837BC /* CppcheckXcodePlugin.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -149,7 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E5F18B218D4C8C3007837BC /* SCXcodeMinimap.m in Sources */,
+				3E5F18B218D4C8C3007837BC /* CppcheckXcodePlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

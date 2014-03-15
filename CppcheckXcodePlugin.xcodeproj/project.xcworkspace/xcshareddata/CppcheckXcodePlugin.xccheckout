@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0BBF2089-5FF8-4A49-9730-87ACBF8BA3FF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CppcheckXcodePlugin</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F5D5B8D7-4F9C-431E-8F9D-984AB9A34EAB</key>
+		<string>https://github.com/kalibannez/CppcheckXcodePlugin.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CppcheckXcodePlugin.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F5D5B8D7-4F9C-431E-8F9D-984AB9A34EAB</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kalibannez/CppcheckXcodePlugin.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F5D5B8D7-4F9C-431E-8F9D-984AB9A34EAB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F5D5B8D7-4F9C-431E-8F9D-984AB9A34EAB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CppcheckXcodePlugin</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Stefan Ceriu. All rights reserved
 //
 
-#import "SCXcodeMinimap.h"
+#import "CppcheckXcodePlugin.h"
 #import <objc/runtime.h>
 
 static NSString * const IDEEditorDocumentWillSaveNotification = @"IDEEditorDocumentWillSaveNotification";
