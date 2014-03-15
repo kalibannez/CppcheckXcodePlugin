@@ -14,7 +14,7 @@ For example, if you want to run cppckeck with special options: just change comma
 
 ## Installation
 - Install Xcode plugin by building the project and restart Xcode
-- Copy IncrementalCppCheck.py script into your project root
+- Copy [IncrementalCppCheck.py](IncrementalCppCheck.py) script into your project root
 - In Xcode in Build Phases tab create new Run Script and enter following script:
 <code>
 SCRIPT_PATH="${SRCROOT}/IncrementalCppCheck.py"<br>
