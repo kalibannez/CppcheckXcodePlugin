@@ -13,6 +13,7 @@ Plugin for Xcode that automatically run cppcheck static analyzer for every chang
 For example, if you want to run cppckeck with special options: just change commant line arguments in IncrementalCppCheck.py
 
 ## Installation
+- Install cppcheck (homebrew is recommended)
 - Install Xcode plugin by building the project and restart Xcode
 - Copy [IncrementalCppCheck.py](IncrementalCppCheck.py) script into your project root
 - In Xcode in Build Phases tab create new Run Script and enter following script:
